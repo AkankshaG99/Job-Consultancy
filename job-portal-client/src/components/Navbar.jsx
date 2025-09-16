@@ -13,9 +13,11 @@ const Navbar = () => {
 
     const navItems = [
         {path: "/", title: "Home"},
+        {path: "/about-us", title: "About Us"},
+        {path: "/services", title: "Services"},
         {path: "/my-job", title: "My Jobs"},
-        {path: "/salary", title: "Salary Estimate"},
-        {path: "/post-job", title: "Post a Job"},
+        {path: "/salary", title: "Training"},
+        {path: "/contact", title: "Contact"},
     ]
   return (
     <header className='max-w-screen container mx-auto xl:px-[40px] px-4'>

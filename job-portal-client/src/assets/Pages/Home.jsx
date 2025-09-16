@@ -15,7 +15,6 @@ import NewsSection from "./NewsSection";
 import Pricing from "./Pricing";
 import FAQSection from "./Faq";
 import Registration from "./Registration";
-import NewsletterBanner from "./NewsletterBanner";
 import Footer from "./Footer";
 
 const Home = () => {
@@ -100,14 +99,14 @@ const Home = () => {
           <div className="absolute bottom-0 left-0 bg-white text-gray-800 p-4 rounded-xl shadow-md flex items-start gap-2 z-10">
             <FaQuoteLeft className="text-indigo-600 text-2xl" />
             <p className="text-sm">
-              You are never too old to set another goal or to dream a new dream.
+              Engineering Excellence Meets Professional Growth.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-            <JobCategories/>
+            {/* <JobCategories/> */}
             <RegisterStep/>
             <ResumeUpload/>
             
@@ -120,8 +119,7 @@ const Home = () => {
     <NewsSection/>
     <Pricing/>
     <FAQSection/>
-    <Registration/>
-    <NewsletterBanner/>
+    <Registration/> 
     <Footer/>
     </div>
   );
