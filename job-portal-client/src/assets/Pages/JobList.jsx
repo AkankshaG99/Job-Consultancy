@@ -59,7 +59,7 @@ export default function FeaturedJobs() {
     },
   ];
 
-  const categories = ["All jobs", "Developer", "Health care", "Finance"];
+  const categories = ["All jobs"];
 
   return (
     <section className="py-16 px-6 md:px-20 bg-gray-50 relative mt-20">
@@ -71,23 +71,24 @@ export default function FeaturedJobs() {
       </h2>
 
       {/* Category Tabs */}
-      <div className="flex justify-center mb-12">
-        <div className="flex gap-4 bg-white shadow-md rounded-xl p-2">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveTab(cat)}
-              className={`px-5 py-2 rounded-lg font-medium transition ${
-                activeTab === cat
-                  ? "bg-purple-600 text-white shadow"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
+      <div className="flex justify-center items-center text-center mb-12 ">
+  <div className="flex gap-4  rounded-xl p-2 w-full md:w-auto">
+    {categories.map((cat) => (
+      <button
+        key={cat}
+        onClick={() => setActiveTab(cat)}
+        className={`px-10 py-2 rounded-lg font-medium transition ${
+          activeTab === cat
+            ? "bg-purple-600 text-white shadow"
+            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+        }`}
+      >
+        {cat}
+      </button>
+    ))}
+  </div>
+</div>
+
 
       {/* Job Cards */}
       <div className="grid md:grid-cols-2 gap-8">

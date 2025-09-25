@@ -47,7 +47,7 @@ const Home = () => {
           </p>
 
           {/* Search Bar */}
-          <div className="mt-6 bg-white rounded-xl flex flex-col md:flex-row items-center shadow-lg overflow-hidden">
+          <div className="mt-6 bg-white rounded-xl flex flex-col md:flex-row items-center shadow-lg overflow-hidden justify-center gap-3">
             <div className="flex items-center px-3 py-3 w-full md:w-1/3 border-b md:border-b-0 md:border-r border-gray-200">
               <FiSearch className="text-gray-500 mr-2" />
               <input
@@ -64,9 +64,10 @@ const Home = () => {
                 className="w-full outline-none text-gray-700"
               />
             </div>
-            <button className="w-full md:w-auto bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700">
-              BROWSE JOBS
-            </button>
+            <button className="w-full md:w-auto bg-indigo-600 px-4 py-2 rounded-lg font-semibold text-white bg-[linear-gradient(127deg,#897BFF_0%,#4A37F3_100%)] hover:opacity-90 mr-3">
+                   BROWSE JOBS
+                 </button>
+
           </div>
 
           {/* Popular Searches */}
