@@ -28,7 +28,7 @@ export default function BrandPartners() {
             Brands partnered with LeBonko for easy hiring process of employees.
             Upload your Resume and get your job profile seen for better results.
           </p>
-          <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg shadow-md hover:opacity-90">
+          <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg shadow-md hover:opacity-90">
             Check Placements
           </button>
         </div>

@@ -111,7 +111,7 @@ const Pricing = () => {
               className={`mt-6 w-full py-3 rounded-lg font-semibold shadow-md transition ${
                 plan.highlight
                   ? "bg-white text-indigo-600 hover:bg-gray-100"
-                  : "bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:opacity-90"
+                  : "bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:opacity-90"
               }`}
             >
               Get This Plan

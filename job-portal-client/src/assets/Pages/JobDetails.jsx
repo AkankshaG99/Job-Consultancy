@@ -30,7 +30,7 @@ const JobDetails = () => {
 <h1><span className="text-xl font-display text-gray-900">{job.jobTitle}</span></h1>
 
 </div>
-    <button className="bg-blue px-8 py-2 text-white" onClick={handleApply}>
+    <button className="bg-gradient-to-r from-purple-500 to-indigo-500 px-8 py-2 text-white" onClick={handleApply}>
         Apply Now
     </button>
 

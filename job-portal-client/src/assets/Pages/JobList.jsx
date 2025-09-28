@@ -79,7 +79,7 @@ export default function FeaturedJobs() {
         onClick={() => setActiveTab(cat)}
         className={`px-10 py-2 rounded-lg font-medium transition ${
           activeTab === cat
-            ? "bg-purple-600 text-white shadow"
+            ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow"
             : "bg-gray-100 text-gray-600 hover:bg-gray-200"
         }`}
       >
@@ -135,7 +135,7 @@ export default function FeaturedJobs() {
                   <FaUsers /> {job.applicants}
                 </span>
               </div>
-              <button className="px-5 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:opacity-90 transition">
+              <button className="px-5 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg font-semibold hover:opacity-90 transition">
                 Apply Now
               </button>
             </div>

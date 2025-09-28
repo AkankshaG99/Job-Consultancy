@@ -64,7 +64,7 @@ const Home = () => {
                 className="w-full outline-none text-gray-700"
               />
             </div>
-            <button className="w-full md:w-auto bg-indigo-600 px-4 py-2 rounded-lg font-semibold text-white bg-[linear-gradient(127deg,#897BFF_0%,#4A37F3_100%)] hover:opacity-90 mr-3">
+            <button className="w-full md:w-auto bg-gradient-to-r from-purple-500 to-indigo-500 px-4 py-2 rounded-lg font-semibold text-white bg-[linear-gradient(127deg,#897BFF_0%,#4A37F3_100%)] hover:opacity-90 mr-3">
                    BROWSE JOBS
                  </button>
 
@@ -77,7 +77,7 @@ const Home = () => {
               {["All jobs", "Developer", "Finance", "Health care"].map((tag, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 bg-white text-gray-800 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100"
+                  className="px-4 py-2 bg-white text-black rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 font-semibold"
                 >
                   {tag}
                 </span>

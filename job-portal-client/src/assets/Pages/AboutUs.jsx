@@ -28,7 +28,7 @@ const AboutUs = () => {
               About Us
             </h1>
             <p className="text-gray-200 max-w-xl text-lg">
-              TheEuConsultancy is a leading European recruitment and training
+              The Eu Consultancy is a leading European recruitment and training
               consultancy specializing in the IT and Automotive sectors.
             </p>
           </div>
@@ -52,34 +52,34 @@ const AboutUs = () => {
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 text-gray-800">
                 <li className="flex items-center space-x-3">
-                  <FaLaptopCode className="text-blue-500 text-xl" /> Software
+                  <FaLaptopCode className="text-blue-500 text-xl mr-2" /> Software
                   Development
                 </li>
                 <li className="flex items-center space-x-3">
-                  <FaServer className="text-green-500 text-xl" /> System
+                  <FaServer className="text-green-500 text-xl mr-2" /> System
                   Administration
                 </li>
                 <li className="flex items-center space-x-3">
-                  <FaShieldAlt className="text-yellow-500 text-xl" />{" "}
+                  <FaShieldAlt className="text-yellow-500 text-xl mr-2" />{" "}
                   Cybersecurity
                 </li>
                 <li className="flex items-center space-x-3">
-                  <FaChartLine className="text-purple-500 text-xl" /> Data
+                  <FaChartLine className="text-purple-500 text-xl mr-2" /> Data
                   Analysis
                 </li>
                 <li className="flex items-center space-x-3">
-                  <FaCogs className="text-indigo-500 text-xl" /> Mechanical
+                  <FaCogs className="text-indigo-500 text-xl mr-2" /> Mechanical
                   Engineering
                 </li>
                 <li className="flex items-center space-x-3">
-                  <FaCar className="text-red-500 text-xl" /> Automotive Design
+                  <FaCar className="text-red-500 text-xl mr-2" /> Automotive Design
                 </li>
                 <li className="flex items-center space-x-3">
-                  <FaCheckCircle className="text-teal-500 text-xl" /> Quality
+                  <FaCheckCircle className="text-teal-500 text-xl mr-2" /> Quality
                   Assurance
                 </li>
                 <li className="flex items-center space-x-3">
-                  <FaIndustry className="text-pink-500 text-xl" /> Production
+                  <FaIndustry className="text-pink-500 text-xl mr-2" /> Production
                   Management
                 </li>
               </ul>
