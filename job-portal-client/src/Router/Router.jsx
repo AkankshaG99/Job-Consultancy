@@ -12,6 +12,7 @@ import Signup from "../components/Signup";
 import AboutUs from "../assets/Pages/AboutUs";
 import OurServices from "../assets/Pages/Services";
 import ContactUs from "../assets/Pages/ContactUs";
+import Training from "../assets/Pages/Training";
 
 const router = createBrowserRouter([
     {
@@ -33,13 +34,12 @@ const router = createBrowserRouter([
           element: <OurServices/>
         },
         {
-          path: "/edit-job/:id",
-          element: <UpdateJob/>,
-          loader: ({params}) => fetch(`https://mern-job-portal-website.vercel.app/all-jobs/${params.id}`)
-        },
-        {
           path: "/contact",
           element: <ContactUs/>
+        },
+        {
+          path: "/training",
+          element: <Training/>
         }
 
     ],

@@ -16,7 +16,7 @@ const Navbar = () => {
         {path: "/about-us", title: "About Us"},
         {path: "/services", title: "Services"},
         {path: "/my-job", title: "My Jobs"},
-        {path: "/salary", title: "Training"},
+        {path: "/training", title: "Training"},
         {path: "/contact", title: "Contact"},
     ]
   return (

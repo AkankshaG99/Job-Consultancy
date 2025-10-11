@@ -7,8 +7,8 @@ export default function ContactUs() {
   
   return (
     <>
-      <section className="bg-[#e45d43] py-6">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-[#e45d43] py-10">
+        <div className="max-w-3xl mx-auto py-6">
           {/* Contact Form */}
           <form className="rounded-xl w-full flex flex-col gap-4 bg-white justify-center items-center p-5">
             <div className="flex items-center gap-2 mb-2 justify-center">
