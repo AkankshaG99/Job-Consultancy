@@ -24,6 +24,7 @@ const authController = {
 
       const saltRounds = 10;
       const passwordHash = await bcrypt.hash(password, saltRounds);
+      console.log(passwordHash)
 
       const user = await UserModel.createUser({
         name,
@@ -55,6 +56,7 @@ const authController = {
   },
 
   async login(req, res) {
+    console.log(req.body, "rrrrrrrrr")
     try {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -67,7 +69,7 @@ const authController = {
     
     
     const match = await bcrypt.compare(password, user.password);
-    if (!match) return res.status(401).json({ message: 'Invalid credentials' });
+    if (!match) return res.status(401).json({ message: 'Password does not match' });
     
     
     const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
