@@ -27,6 +27,7 @@ const Login = () => {
       const response = await login({ email, password })
       if (response?.status == 200) {
         localStorage.setItem("token", response.data.token);
+        localStorage.setItem("userName", response.data.user.username)
         toast.success("Login Successful!");
         navigate("/"); 
       } else {

@@ -9,9 +9,10 @@ const authController = {
   // Added async here
   async signup(req, res) {
     try {
-      const { name, email, password } = req.body;
+      console.log("lllllllll", req.body)
+      const { name, email, password, phone } = req.body;
 
-      if (!name || !email || !password) {
+      if (!name || !email || !password || !phone) {
         return res
           .status(400)
           .json({ message: "Name, email and password are required." });
@@ -30,6 +31,7 @@ const authController = {
         name,
         email,
         password: passwordHash,
+        phone
       });
 
       // Generate token
@@ -75,7 +77,7 @@ const authController = {
     const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
     
     
-    return res.json({ message: 'Login successful', token });
+    return res.json({ message: 'Login successful', token, user });
     } catch (err) {
     console.error('Login error', err);
     return res.status(500).json({ message: 'Internal server error' });
