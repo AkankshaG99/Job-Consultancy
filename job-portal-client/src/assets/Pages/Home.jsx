@@ -108,12 +108,13 @@ const Home = () => {
     </div>
 
             {/* <JobCategories/> */}
-            <RegisterStep/>
-            <ResumeUpload/>
+            {/* <RegisterStep/> */}
+           
             
             
     </div>
     <JobList/>
+    <ResumeUpload/>
     <Testimonials/>
     <BrandPartners/>
     <OurRecords/>

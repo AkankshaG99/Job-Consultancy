@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ResumeUpload() {
   return (
-    <section className="flex items-center justify-between bg-[#443CFF] rounded-[2rem] px-12 py-10">
+    <section className="flex items-center justify-between bg-[#443CFF] rounded-[2rem] px-12 mx-10 py-10">
       {/* Left side image */}
       <div className="relative flex-1 flex justify-center">
         <img
