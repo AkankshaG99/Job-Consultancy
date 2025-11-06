@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes');
+const jobsRoutes = require("./routes/jobsRoutes")
 const pool = require('./config/db');
 const cors = require('cors');
 
@@ -20,6 +21,7 @@ app.get('/', (req, res) => res.send('Node MVC Auth API is running'));
 
 // ✅ Routes should come *after* middlewares
 app.use('/api/auth', authRoutes);
+app.use('/api/jobs', jobsRoutes)
 
 const PORT = process.env.PORT || 3000;
 

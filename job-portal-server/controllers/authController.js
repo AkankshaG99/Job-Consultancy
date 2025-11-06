@@ -9,7 +9,6 @@ const authController = {
   // Added async here
   async signup(req, res) {
     try {
-      console.log("lllllllll", req.body)
       const { name, email, password, phone } = req.body;
 
       if (!name || !email || !password || !phone) {

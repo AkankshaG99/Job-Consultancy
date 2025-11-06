@@ -3,7 +3,6 @@ const pool = require("../config/db")
 
 const UserModel = {
 async createUser({ name, email, password, phone }) {
-  console.log(password)
 const sql = 'INSERT INTO users (username, email, password, phone) VALUES (?, ?, ?, ?)';
 const [result] = await pool.execute(sql, [name, email, password, phone]);
 return { id: result.insertId, name, email };

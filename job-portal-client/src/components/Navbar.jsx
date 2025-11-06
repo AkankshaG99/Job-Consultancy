@@ -19,7 +19,7 @@ const Navbar = () => {
     { path: "/contact", title: "Contact" },
   ];
   return (
-    <header className="max-w-screen container mx-auto xl:px-[40px] px-3">
+    <header className="max-w-screen container mx-auto xl:px-[40px] px-3 fixed top-0 left-0 w-full z-50 bg-white h-25">
       <nav className="flex justify-between items-center py-5">
         <a href="/" className="flex items-center gap-2 text-2xl text-black">
           <img
@@ -49,15 +49,15 @@ const Navbar = () => {
             <div className="py-2 px-5">Akanksha Gawade</div>
           ) : (
             <>
-              <Link to="/login" className="py-2 px-5 border rounded">
+              <Link to="/login" className="py-2 px-8 border rounded">
                 Login
               </Link>
-              <Link
+              {/* <Link
                 to="/sign-up"
                 className="py-2 px-5 border rounded bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
               >
                 Sign up
-              </Link>{" "}
+              </Link>{" "} */}
             </>
           )}
           {/* <Link to = "/LogoutButton" className='py-2 px-5 border rounded bg-blue text-white'>Logout</Link> */}

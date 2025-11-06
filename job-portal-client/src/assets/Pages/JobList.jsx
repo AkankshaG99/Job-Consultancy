@@ -2,9 +2,10 @@ import { useState } from "react";
 import { FaMapMarkerAlt, FaUsers } from "react-icons/fa";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FaFacebookF, FaPinterestP } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 
 export default function FeaturedJobs() {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState("All jobs");
 
   const jobs = [
@@ -62,7 +63,7 @@ export default function FeaturedJobs() {
   const categories = ["All jobs"];
 
   return (
-    <section className="py-16 px-6 md:px-20 bg-gray-50 relative mt-20">
+    <section className="py-16  md:px-20 bg-gray-50 relative mt-20">
       <p className="text-red-500 font-semibold uppercase tracking-wide text-center">
         Featured Jobs
       </p>
@@ -143,7 +144,9 @@ export default function FeaturedJobs() {
         ))}
       </div>
       <div className="flex justify-center mt-10">
-        <button className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:opacity-90">
+        <button className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:opacity-90"
+        onClick={() => navigate("/jobList")}
+        >
           SHOW ALL JOBS →
         </button>
       </div>

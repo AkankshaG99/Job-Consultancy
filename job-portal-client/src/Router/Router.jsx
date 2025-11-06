@@ -13,6 +13,7 @@ import AboutUs from "../assets/Pages/AboutUs";
 import OurServices from "../assets/Pages/Services";
 import ContactUs from "../assets/Pages/ContactUs";
 import Training from "../assets/Pages/Training";
+import AllJobs from "../assets/Pages/AllJobs";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,9 @@ const router = createBrowserRouter([
         {
           path: "/training",
           element: <Training/>
+        },
+        {path: "/jobList",
+          element: <AllJobs/>
         }
 
     ],
