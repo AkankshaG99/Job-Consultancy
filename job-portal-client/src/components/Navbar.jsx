@@ -14,7 +14,7 @@ const Navbar = () => {
     { path: "/", title: "Home" },
     { path: "/about-us", title: "About Us" },
     { path: "/services", title: "Services" },
-    { path: "/my-job", title: "My Jobs" },
+    ...(token ? [{ path: "/my-job", title: "My Jobs" }] : []),
     { path: "/training", title: "Training" },
     { path: "/contact", title: "Contact" },
   ];
