@@ -1,7 +1,7 @@
 import { ApiConfig } from "./Api.config";
 import axiosclient from "./Axios-Client";
 
-const {LOGIN, SIGNUP, CONTACTUS} = ApiConfig
+const {LOGIN, SIGNUP, CONTACTUS, JOBS} = ApiConfig
 
 export const login = async (data) =>{
     try{
@@ -33,5 +33,17 @@ export const contacts = async (data) =>{
         console.error("Contact API Error:", err?.response?.data || err.message);
         throw err;
         
+    }
+}
+
+export const allJobs = async(title = "", loc = "")=>{
+    try{
+        const response = await axiosclient.get(JOBS, {
+            params: { title, loc },
+          })
+        return response
+    }catch(err){
+        console.log(err)
+        throw err
     }
 }
