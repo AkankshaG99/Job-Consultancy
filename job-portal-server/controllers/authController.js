@@ -117,6 +117,25 @@ const authController = {
             });
           }
         },
+
+        async userDetails(req, res){
+          try{
+            const {id} = req.query
+            const user = await UserModel.findById(id)
+            return res.status(200).json({
+              success: true,
+              message: "Fetch successfully",
+              data:user
+            });
+          }catch (err){
+            console.log(err)
+          return res.status(500).json({
+            success: false,
+            message: "Internal server error. Please try again later.",
+          });
+          }
+         
+        }
 };
 
 

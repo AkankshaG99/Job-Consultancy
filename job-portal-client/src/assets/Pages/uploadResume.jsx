@@ -1,27 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ResumeUpload() {
    const [fileName, setFileName] = useState("");
   const [isExtracting, setIsExtracting] = useState(false);
+  const token = localStorage.getItem("token")
+  const navigate = useNavigate()
 
-  const handleFileSelect = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setFileName(file.name);
-      setIsExtracting(true);
+  // const handleFileSelect = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     setFileName(file.name);
+  //     setIsExtracting(true);
 
-      setTimeout(() => {
-        setIsExtracting(false);
-        toast.success("Resume extracted successfully ✅");
-      }, 3000);
+  //     setTimeout(() => {
+  //       setIsExtracting(false);
+  //       toast.success("Resume extracted successfully ✅");
+  //     }, 3000);
+  //   }
+  // };
+
+  const handleRedirect =() =>{
+    if(!token){
+      toast.info("Please log in first to upload your resume.")
+      navigate("/login")
+    }else{
+      navigate("/profile")
     }
-  };
+  }
   return (
     <>
     <section className="flex items-center justify-between bg-[#443CFF] rounded-[2rem] px-12 py-10 mx-10">
-      <ToastContainer
+      {/* <ToastContainer
               position="top-right"
               autoClose={3000}
               hideProgressBar={false}
@@ -30,7 +42,7 @@ export default function ResumeUpload() {
               pauseOnHover
               draggable
               theme="light"
-            />
+            /> */}
       <div className="relative flex-1 flex justify-center">
         <img
           src="/images/businesswoman.png"
@@ -50,23 +62,13 @@ export default function ResumeUpload() {
           the position and its reference number. If you did not find the vacancy
           on the employer's website, it's helpful to state where you found it.
         </p>
-         <input
-          type="file"
-          id="resumeUpload"
-          accept=".pdf,.doc,.docx"
-          onChange={handleFileSelect}
-          className="hidden"
-        />
 
         {/* Upload Button (acts as label for file input) */}
         <label
           htmlFor="resumeUpload"
-          className={`w-[50%] md:w-[50%] flex items-center gap-2 font-semibold px-6 py-3 rounded-lg shadow-md transition cursor-pointer 
-            ${
-              isExtracting
-                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                : "bg-white text-[#443CFF] hover:bg-gray-100"
-            }`}
+          className={`w-[50%] md:w-[50%] bg-white text-[#443CFF] flex items-center gap-2 font-semibold px-6 py-3 rounded-lg shadow-md transition cursor-pointer 
+          `}
+          onClick={handleRedirect}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,15 +84,16 @@ export default function ResumeUpload() {
               d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M16 12l-4-4m0 0l-4 4m4-4v12"
             />
           </svg>
-          {isExtracting ? "Extracting..." : "UPLOAD YOUR RESUME"}
+          UPLOAD YOUR RESUME
+          {/* {isExtracting ? "Extracting..." : "UPLOAD YOUR RESUME"} */}
         </label>
 
         {/* File Name Display */}
-        {fileName && (
+        {/* {fileName && (
           <p className="mt-3 text-sm text-gray-200">
             📄 Selected: <span className="font-semibold">{fileName}</span>
           </p>
-        )}
+        )} */}
       </div>
     </section>
       </>

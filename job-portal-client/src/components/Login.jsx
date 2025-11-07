@@ -28,6 +28,7 @@ const Login = () => {
       if (response?.status == 200) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("userName", response.data.user.username)
+        localStorage.setItem("id", response.data.user.id)
         toast.success("Login Successful!");
         navigate("/"); 
       } else {

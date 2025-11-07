@@ -17,7 +17,7 @@ return rows[0] || null;
 
 
 async findById(id) {
-const sql = 'SELECT id, username, email, created_at FROM users WHERE id = ? LIMIT 1';
+const sql = 'SELECT id, username, email, phone, created_at FROM users WHERE id = ? LIMIT 1';
 const [rows] = await pool.execute(sql, [id]);
 return rows[0] || null;
 },

@@ -14,6 +14,7 @@ import OurServices from "../assets/Pages/Services";
 import ContactUs from "../assets/Pages/ContactUs";
 import Training from "../assets/Pages/Training";
 import AllJobs from "../assets/Pages/AllJobs";
+import ProfilePage from "../components/ProfilePage";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         },
         {path: "/jobList",
           element: <AllJobs/>
+        },
+        {
+          path: "/profile",
+          element: <ProfilePage/>
         }
 
     ],
