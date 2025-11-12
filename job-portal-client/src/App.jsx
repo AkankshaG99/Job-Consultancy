@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TopBar from "./components/NavbarTop";
+import Footer from "./assets/Pages/Footer"
 
 function App() {
   return (

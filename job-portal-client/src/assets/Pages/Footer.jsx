@@ -2,8 +2,13 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhoneAlt  } from "
 import { SiIndeed } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
  
 export default function Footer() {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  console.log("tttttttttt")
   return (
     <footer className="bg-[#6f55f2] text-white pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-white/50 pb-10">
@@ -42,7 +47,14 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>› Upload Resume</li>
             <li>› Job Search</li>
-            <li>› Your Jobs</li>
+            {token && (
+              <li
+                className="cursor-pointer hover:text-orange-400 transition"
+                onClick={() => navigate("/my-job")}
+              >
+                › Your Jobs
+              </li>
+            )}
           </ul>
         </div>
  
@@ -59,12 +71,16 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-bold mb-4">Information</h2>
           <ul className="space-y-2 text-sm">
-            <li>› About Us</li>
-            <li>› Terms and Conditions</li>
-            <li>› Privacy Policy</li>
-            <li>› Careers with us</li>
-            <li>› Site Map</li>
-            <li>› Contact Us</li>
+            <li className="cursor-pointer hover:text-orange-400 transition"
+            onClick={() => navigate("/about-us")}
+            > › About Us</li>
+            <li className="cursor-pointer">› Terms and Conditions</li>
+            <li className="cursor-pointer">› Privacy Policy</li>
+            <li className="cursor-pointer">› Careers with us</li>
+            <li className="cursor-pointer">› Site Map</li>
+            <li className="cursor-pointer hover:text-orange-400 transition"
+            onClick={() => navigate("/contact")}
+            >› Contact Us</li>
           </ul>
         </div>
       </div>
