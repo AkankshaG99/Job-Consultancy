@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const authController = require('../controllers/authController');
 const authMiddleware = require('../middleware/authMiddleware');
+const upload = require("../config/multerConfig")
 
 
 // POST /api/auth/signup
@@ -17,6 +18,6 @@ router.get('/me', authMiddleware, authController.me);
 
 router.post("/contactUs", authController.contactUs)
 router.get("/getUserDetails", authController.userDetails)
-
+router.post('/upload-resume', upload.single('resume'), authController.uploadResume);
 
 module.exports = router;

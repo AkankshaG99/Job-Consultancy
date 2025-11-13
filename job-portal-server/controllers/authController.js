@@ -135,6 +135,25 @@ const authController = {
           });
           }
          
+        },
+
+        async uploadResume (req, res){
+          try{
+            console.log(req.file)
+            if (!req.file) {
+              return res.status(400).json({ message: 'No file uploaded' });
+            }
+
+            const fileUrl = req.file.path; // Cloudinary URL
+            return res.status(200).json({
+              message: 'Resume uploaded successfully!',
+              url: fileUrl,
+            });
+
+          }catch(err){
+            console.error('Upload error:', error);
+    res.status(500).json({ message: 'Something went wrong', error });
+          }
         }
 };
 
